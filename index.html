@@ -3,114 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LalaMuzic - Trình phát nhạc kết hợp học ngoại ngữ qua Dictation và Shadowing.">
-    <title>LalaMuzic - Học ngoại ngữ qua âm nhạc</title>
-    <!-- Bạn có thể thay logo.png bằng icon của LalaMuzic -->
+    <meta name="description" content="Nghe nhạc, xem video và luyện ngoại ngữ với LalaMuzic.">
+    <title>LalaMuzic — Thưởng thức âm nhạc, phát triển ngoại ngữ</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="toolbar">
-        <div class="toolbar-logo">
-            <img src="logo.png" alt="LalaMuzic Logo">
-            LalaMuzic
-        </div>
-        <div class="toolbar-actions">
-            <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">VI / EN</button>
-        </div>
+<div class="toolbar">
+    <div class="toolbar-logo">
+        <img src="logo.png" alt="LalaMuzic Logo">
+        LalaMuzic
     </div>
+    <div class="toolbar-actions">
+        <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">VI / EN</button>
+    </div>
+</div>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <img src="logo.png" alt="LalaMuzic" class="hero-logo">
-            <h1 class="hero-slogan" data-i18n="slogan">Làm chủ ngoại ngữ qua từng giai điệu</h1>
-            <p class="hero-subtitle" data-i18n="hero_desc">Trình phát nhạc thông minh tích hợp phương pháp luyện nghe sâu (Dictation), nói đuổi (Shadowing) và thuật toán lặp lại ngắt quãng (FSRS).</p>
-            <a href="https://play.google.com/store/apps/details?id=com.lathedo.lalamuzic" class="playstore-btn" target="_blank">
-                <i class="material-icons">shop</i>
-                <span data-i18n="download">Tải trên Google Play</span>
-            </a>
-        </div>
-    </section>
+<!-- PHẦN GIỚI THIỆU -->
+<section class="hero-section">
+    <div class="hero-content">
+        <img src="logo.png" alt="LalaMuzic" class="hero-logo">
+        <h1 class="hero-slogan">Nghe để tận hưởng, nghe để tiến bộ.</h1>
+        <p class="hero-subtitle">Nghe nhạc, xem video và biến podcast, sách nói thành nguồn luyện ngoại ngữ. Chủ động tốc độ, cách lặp và nhịp học trong cùng một ứng dụng.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.lathedo.lalamuzic" class="playstore-btn" target="_blank">
+            <i class="material-icons">shop</i>
+            <span>Tải trên Google Play</span>
+        </a>
+    </div>
+</section>
 
-    <section class="feature-section bg-white">
-        <div class="container-inner layout-zigzag">
-            <div class="feature-visual">
-                <div class="mockup-shape">
-                    <div class="device-frame">
-                        <!-- Cập nhật ảnh chụp màn hình app của bạn vào đây -->
-                        <img src="player.png" alt="Màn hình phát nhạc" title="Giao diện LalaMuzic">
-                    </div>
+<!-- TÍNH NĂNG 1 -->
+<section class="feature-section bg-white">
+    <div class="container-inner layout-zigzag">
+        <div class="feature-visual">
+            <div class="mockup-shape">
+                <div class="device-frame">
+                    <img src="TN1.jpg" alt="Một trình phát, nhiều cách tận hưởng">
                 </div>
             </div>
-            <div class="feature-text">
-                <h2 class="feature-title" data-i18n="box1_title">Trình phát nhạc chuyên nghiệp</h2>
-                <p class="feature-desc" data-i18n="box1_desc">
-                    Trải nghiệm âm nhạc mượt mà với giao diện tùy chỉnh và công cụ xử lý âm thanh mạnh mẽ.
-                </p>
-                <ul class="feature-list mt-4">
-                    <li>
-                        <i class="material-icons accent-icon">tune</i>
-                        <span data-i18n="icon_filter">Bộ lọc âm thanh đa dạng: Phân tách giọng nói, loại bỏ tạp âm.</span>
-                    </li>
-                    <li>
-                        <i class="material-icons accent-icon">speed</i>
-                        <span data-i18n="icon_speed">Kiểm soát tốc độ và cao độ (Pitch & Speed) không làm méo tiếng.</span>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </section>
-
-    <section class="feature-section bg-alt">
-        <div class="container-inner layout-zigzag reverse">
-            <div class="feature-visual">
-                <div class="mockup-shape">
-                    <div class="device-frame">
-                        <img src="dictation.png" alt="Màn hình Dictation">
-                    </div>
-                </div>
-            </div>
-            <div class="feature-text">
-                <h2 class="feature-title" data-i18n="box2_title">Luyện nghe & Chép chính tả (Dictation)</h2>
-                <p class="feature-desc" data-i18n="box2_desc">
-                    Biến lời bài hát thành các bài tập rèn luyện kỹ năng nghe hoàn toàn tự động.
-                </p>
-                <ul class="feature-list mt-4">
-                    <li>
-                        <i class="material-icons accent-icon">loop</i>
-                        <span data-i18n="icon_ab">Lặp đoạn AB nâng cao giúp nghe rõ từng chi tiết nhỏ nhất.</span>
-                    </li>
-                    <li>
-                        <i class="material-icons accent-icon">psychology</i>
-                        <span data-i18n="icon_fsrs">Ghi nhớ dài hạn với thuật toán Spaced Repetition (FSRS).</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="super__free">
-            <h3 class="super__free-h3" data-i18n="free_title">Nâng tầm kỹ năng nghe nói ngay hôm nay</h3>
-            <p class="super__free-description" data-i18n="free_desc">
-                Tận dụng kho nhạc yêu thích của bạn để học ngoại ngữ một cách tự nhiên nhất.
+        <div class="feature-text">
+            <h2 class="feature-title">Một trình phát, nhiều cách tận hưởng</h2>
+            <p class="feature-desc">
+                Thưởng thức âm nhạc, theo dõi podcast, nghe sách nói và xem video từ kho nội dung của bạn.
             </p>
-            <a href="https://play.google.com/store/apps/details?id=com.lathedo.lalamuzic" class="playstore-btn mt-4" target="_blank" style="margin-top: 24px; display: inline-flex;">
-                <i class="material-icons">shop</i>
-                <span data-i18n="download_cta">Tải trên Google Play</span>
-            </a>
+            <ul class="feature-list mt-4">
+                <li>
+                    <i class="material-icons accent-icon">play_circle_filled</i>
+                    <span>Phát tệp âm thanh và video trên thiết bị.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">speed</i>
+                    <span>Điều chỉnh tốc độ để nghe, xem theo nhu cầu.</span>
+                </li>
+            </ul>
         </div>
-    </section>
-
-    <div class="footer">
-        <p>&copy; 2026 LalaMuzic. All rights reserved.</p>
-        <a href="policy_vi.html" id="link-policy" data-i18n="policy">Chính sách bảo mật</a> |
-        <a href="terms_vi.html" id="link-terms" data-i18n="terms">Điều khoản sử dụng</a> |
-        <a href="licenses_vi.html" id="link-licenses" data-i18n="licenses">Mã nguồn mở</a>
     </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- TÍNH NĂNG 2 -->
+<section class="feature-section bg-alt">
+    <div class="container-inner layout-zigzag reverse">
+        <div class="feature-visual">
+            <div class="mockup-shape">
+                <div class="device-frame">
+                    <img src="TN2.jpg" alt="Tự tạo kịch bản nghe">
+                </div>
+            </div>
+        </div>
+        <div class="feature-text">
+            <h2 class="feature-title">Tự tạo kịch bản nghe</h2>
+            <p class="feature-desc">
+                Để trình phát tự lặp và chuyển đoạn theo thiết lập của bạn. Nghe kỹ phần chưa rõ mà không phải liên tục tua lại.
+            </p>
+            <ul class="feature-list mt-4">
+                <li>
+                    <i class="material-icons accent-icon">settings_backup_restore</i>
+                    <span>Tạo các đoạn lặp A–B cho âm thanh và video.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">tune</i>
+                    <span>Đặt số lần lặp và tốc độ cho từng đoạn.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">dynamic_feed</i>
+                    <span>Lặp riêng đoạn khó hoặc nghe xen kẽ trong mạch bài.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">trending_up</i>
+                    <span>Tăng dần tốc độ qua mỗi lượt để luyện từ chậm đến tốc độ gốc.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- TÍNH NĂNG 3 -->
+<section class="feature-section bg-white">
+    <div class="container-inner layout-zigzag">
+        <div class="feature-visual">
+            <div class="mockup-shape">
+                <div class="device-frame">
+                    <img src="TN3.jpg" alt="Nghe rõ hơn, biết mình sai ở đâu">
+                </div>
+            </div>
+        </div>
+        <div class="feature-text">
+            <h2 class="feature-title">Nghe rõ hơn, biết mình sai ở đâu</h2>
+            <p class="feature-desc">
+                Luyện nghe chép chính tả tiếng Anh và tiếng Trung với âm thanh và bản chép lời. Nhận ra từ còn nghe thiếu để luyện đúng chỗ.
+            </p>
+            <ul class="feature-list mt-4">
+                <li>
+                    <i class="material-icons accent-icon">spellcheck</i>
+                    <span>Đối chiếu câu trả lời theo từng từ.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">lightbulb</i>
+                    <span>Nhận gợi ý theo ba mức khi gặp khó.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">history_edu</i>
+                    <span>Ôn lại câu chép sai theo lịch giãn cách để củng cố ghi nhớ.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- TÍNH NĂNG 4 -->
+<section class="feature-section bg-alt">
+    <div class="container-inner layout-zigzag reverse">
+        <div class="feature-visual">
+            <div class="mockup-shape">
+                <div class="device-frame">
+                    <img src="TN4.jpg" alt="Tập nói cùng nội dung bạn chọn">
+                </div>
+            </div>
+        </div>
+        <div class="feature-text">
+            <h2 class="feature-title">Tập nói cùng nội dung bạn chọn</h2>
+            <p class="feature-desc">
+                Luyện nói theo podcast, sách nói và hội thoại không có nhạc nền. Rèn phát âm, nhịp điệu và cách nhấn giọng qua từng câu.
+            </p>
+            <ul class="feature-list mt-4">
+                <li>
+                    <i class="material-icons accent-icon">language</i>
+                    <span>Hỗ trợ luyện nói tiếng Anh và tiếng Trung.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">record_voice_over</i>
+                    <span>Tùy chỉnh tốc độ và lặp câu mẫu theo khả năng.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">wifi_off</i>
+                    <span>Nhận dạng giọng nói trên thiết bị, luyện tập không cần mạng.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- TÍNH NĂNG 5 -->
+<section class="feature-section bg-white">
+    <div class="container-inner layout-zigzag">
+        <div class="feature-visual">
+            <div class="mockup-shape">
+                <div class="device-frame">
+                    <img src="TN5.jpg" alt="Công cụ âm thanh ngay trong tầm tay">
+                </div>
+            </div>
+        </div>
+        <div class="feature-text">
+            <h2 class="feature-title">Công cụ âm thanh ngay trong tầm tay</h2>
+            <p class="feature-desc">
+                Cắt âm thanh, chuyển video thành audio và đồng bộ lời ngay trong ứng dụng, thuận tiện cho cả giải trí lẫn học tập.
+            </p>
+            <ul class="feature-list mt-4">
+                <li>
+                    <i class="material-icons accent-icon">content_cut</i>
+                    <span>Cắt MP3, giữ lại đoạn âm thanh bạn cần.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">video_library</i>
+                    <span>Tách âm thanh từ video để nghe riêng.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">lyrics</i>
+                    <span>Đồng bộ lời theo thời gian, lưu tệp LRC hoặc nhúng vào MP3.</span>
+                </li>
+                <li>
+                    <i class="material-icons accent-icon">edit_note</i>
+                    <span>Chỉnh thông tin bài nhạc và ảnh bìa.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- LỜI KÊU GỌI CUỐI TRANG -->
+<section class="cta-section">
+    <div class="super__free">
+        <h3 class="super__free-h3">Thêm giá trị cho mỗi lần nghe</h3>
+        <p class="super__free-description">
+            Một ứng dụng để thưởng thức nhạc, xem video, xử lý âm thanh và luyện ngoại ngữ. Khám phá nhiều hơn từ kho nội dung của bạn cùng LalaMuzic.
+        </p>
+        <a href="https://play.google.com/store/apps/details?id=com.lathedo.lalamuzic" class="playstore-btn mt-4" target="_blank" style="margin-top: 24px; display: inline-flex;">
+            <i class="material-icons">shop</i>
+            <span>Tải trên Google Play</span>
+        </a>
+    </div>
+</section>
+
+<!-- CHÂN TRANG -->
+<div class="footer">
+    <p>&copy; 2026 LalaMuzic. Bảo lưu mọi quyền.</p>
+    <a href="policy_vi.html" id="link-policy">Chính sách bảo mật</a> |
+    <a href="terms_vi.html" id="link-terms">Điều khoản sử dụng</a> |
+    <a href="licenses_vi.html" id="link-licenses">Giấy phép nguồn mở</a>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

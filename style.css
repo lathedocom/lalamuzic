@@ -1,4 +1,4 @@
-/* --- Hệ thống Biến số Màu sắc (Chế độ Sáng) --- */
+/* --- Hệ thống Biến số Màu sắc (Chỉ Chế độ Sáng) --- */
 :root {
     --primary-color: #0F766E; /* Xanh ngọc Ocean Teal */
     --primary-dark: #115E59;
@@ -15,20 +15,6 @@
     --card-bg: #FFFFFF;
     --border-color: #E8EAED;
     --shadow-color: rgba(0,0,0,0.08);
-}
-
-/* --- Chế độ Tối (Dark Mode Tự động) --- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-main: #E2E8F0;
-        --text-light: #94A3B8;
-        --bg-white: #0F172A;
-        --section-bg-alt: #1E293B;
-        --toolbar-bg: #0F172A;
-        --card-bg: #1E293B;
-        --border-color: #334155;
-        --shadow-color: rgba(0,0,0,0.4);
-    }
 }
 
 body {
@@ -155,6 +141,13 @@ body {
     .feature-text { flex: 1; padding: 0 20px; }
 }
 
+/* Responsive cho khối ảnh đôi (Tính năng 1) trên Mobile */
+@media (max-width: 799px) {
+    .feature-visual {
+        flex-wrap: wrap;
+    }
+}
+
 /* --- Thiết bị Mockup --- */
 .mockup-shape {
     background: var(--section-bg-alt);
@@ -194,6 +187,21 @@ body {
     display: block;
     border-radius: 16px; 
     margin: 0 4px; 
+}
+
+/* Co giãn ảnh trên màn hình nhỏ để 2 ảnh Tính năng 1 không bị tràn */
+@media (max-width: 600px) {
+    .device-frame img {
+        max-height: 380px; 
+    }
+    .mockup-shape {
+        padding: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .device-frame img {
+        max-height: 280px; 
+    }
 }
 
 /* --- Typography Nội dung --- */
